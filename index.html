@@ -1,0 +1,244 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QMEMORY frozen experiment plan</title><style>body{font:17px/1.6 system-ui,sans-serif;max-width:960px;margin:3rem auto;padding:0 1.2rem;color:#172334;background:#fbfcff}h1,h2{line-height:1.2}a{color:#164baf}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf1f8;padding:1.2rem;font:14px/1.6 ui-monospace,monospace}.notice{border-left:5px solid #a36600;padding:1rem;background:#fff4df}code{overflow-wrap:anywhere}</style></head><body>
+<h1>QMEMORY frozen experiment plan</h1><p>A result-free plan for five relation trials and four comparison arms, with a maximum of 25 existing Spark credits and no purchases.</p>
+<p><a href="protocol.txt">Exact original plan</a> · <a href="frozen-manifest.json">SHA256 and scope record</a> · <a href="https://github.com/dakuwonmoody-lab/genesis-qmemory-registration">Repository history</a> · <a href="#full-plan">Read full plan</a></p>
+<p class="notice">This public protocol snapshot is not experimental results or accepted hardware execution registration. No registration clock has started; no spending or QPU submission is authorized by this site.</p>
+<h2>Review and evidence scope</h2><p>The scientific design received scoped conditional acceptance. A later independent review closed both latest offline adapter recovery issues and passed 58 lightweight fixed checks. That acceptance does not establish physical reset, routed circuit behavior, production result decoding or total provider pricing. Source code and internal review/provenance archives are not published on this site.</p>
+<p>The protocol remains unchanged, including all four controls, copy limits, success criteria and incomplete/negative outcomes. Public example validation/quotes are separate evidence, not confirmation data or a guarantee that every adaptive circuit fits the budget. No study was rerun.</p>
+<h2>Frozen identity and publication</h2><p>Plan snapshot: <code>q25-plan-v02-20261023</code>. SHA256 of <a href="protocol.txt">protocol.txt</a>: <code>ab7ead7fc705cf81a2db41c67b837708d121e11c62845e4b60d9eea98eca6ffc</code>.</p>
+<p>The original plan retains its historical draft-status wording. The later scoped review dispositions above do not rewrite its bytes or imply hardware acceptance. Corrections require a new named snapshot; preserve this record. GitHub hosting and Git author dates alone are not independent immutable timestamp proof.</p>
+<p>Accepted final publication, exact code/runtime/provider bindings and a fixed authenticated future pulse at least 86,400 seconds later remain separate requirements. No actual future pulse has been selected or fetched here. A positive scientific outcome cannot be guaranteed in advance.</p>
+<h2 id="full-plan">Full frozen plan</h2><pre># QMEMORY 25-credit protocol V02 — result-free registration candidate
+
+Date: 2026-10-18 UTC. Campaign: GENESIS_QMEMORY_25_UNSIGNED_V01.
+Status: CANDIDATE_FOR_INDEPENDENT_DESIGN_REREVIEW.
+This is NOT the original v2.0 Stage-C experiment, NOT published registration,
+NOT a started 24-hour clock, and NOT permission to spend or submit.
+
+## Question and claim boundary
+
+At 54 copies per arm, do coherent two-copy measurements identify the full unsigned
+five-qubit Pauli word P more accurately than the declared dephased and measure-first
+protocols? The unknown source remains rho=(I+sP)/32. Sign s is a hidden nuisance.
+There are 1,023 nonidentity unsigned words; I/X/Y/Z at each site is scored, not just
+the locations of nonidentity entries.
+
+The primary label is BOUNDED_PROTOCOL_DIFFERENCE_SUPPORTED, not an attribution
+that coherence ALONE caused every physical difference. A further causal-memory
+interpretation needs the stated trusted-source/measurement assumptions and bounded
+order-dependent noise; absent those it stays a comparison of observed protocols.
+No generic classical, native-GMLF, scaling, energy or original Stage-C advantage
+flag is set. Host posterior/decoder work remains explicitly host work.
+
+The completed 300-relation study and its proposed a_min=0.5625 are preserved.
+They are not rerun, reclassified, or used as this new protocol&#x27;s power guarantee.
+
+## Review disposition and V01 corrections
+
+Independent V01 note: reviews/QMEMORY_25_DESIGN_V01_INDEPENDENT_REVIEW.md.
+Its verdict REVISE is retained unchanged. V02 makes four substantive corrections:
+
+1. Restore the original combined score 0.5 I(o;(P,s)) + 0.5 I(o;P).
+   Unsigned-only one-copy information is initially zero at the symmetric sign prior.
+2. Match the coherent/dephased marker rails, gates and logical wiring. For each
+   source-A rail a and fresh marker e, coherent does H(e); CX(a,e), whereas
+   dephased does CX(a,e); H(e). In the first case the marker is |+&gt; and the source
+   is unchanged; in the second, tracing the marker implements Z dephasing.
+   The only change is gate ORDER. This proves ideal channels, NOT identical
+   physical noise or a post-compilation resource match.
+3. The Bell reference now uses ONE pair per shot with a fresh uniform random
+   shared measurement setting. XX/YY/ZZ on different independently noisy pairs
+   cannot certify a common-state entanglement witness.
+4. Freeze concrete source/coin circuits, cbit roles, unsigned MAP, bounded
+   witness intervals, copy limits and a no-overspend guard in the adjacent code.
+
+V01 files and arithmetic receipt remain historical, not current V02 resource counts.
+
+## Fixed scientific constants and arms
+
+- Five independent relation trials, drawn uniformly WITH replacement after the
+  future registered public Beacon. Duplicate and all-I/Z relations stay in.
+- Five system qubits/copy; independent uniform nuisance signs, fixed per trial.
+- Every arm receives exactly 54 unknown-source copies/trial, all used.
+- QMEMORY: 27 two-copy Bell rows. Use hash-pinned existing qmemory_winner with
+  pairs=27; same hypothesis order, maximum vote and deterministic index tie.
+- DEPHASED_QMEMORY: 27 rows under the matched-marker dephased circuit.
+  Same Bell decoder. All-I/Z relations are not erased and may cause a legitimate tie.
+- MF_STAB_3X18: 3 static blocks of 18 single-copy measurements. Choose the next
+  basis only after the previous block&#x27;s entire observations are retained.
+- MF_RANDOM: 54 independent single-copy product measurements, uniform per-site
+  X/Y/Z in the ideal coin POVM, with setting and outcome retained jointly.
+
+Three 18-copy blocks are NOT equivalent to the original 55-per-copy-adaptive
+MF_STAB. The original F-1 control-strength rule remains binding on the old route;
+this new comparison does not clear that rule or inherit its acceptance.
+
+## Exact measure-first reference policy
+
+q25_measure_first_policy.py loads only the SHA-pinned Stage-A stab source
+7d2ca41db6fcbebb6f539e16bda1bdf245400cd3f5982917f274a5c8da388533.
+NumPy is fixed at 2.5.2, PCG64 is explicit, and proposal seeds are 128-bit integers.
+
+Use StabLearner(noise=None) with nonidentity dprep set to 0.95. This implements
+L_epsilon(o|P,s) = 0.95 L_ideal(o|P,s) + 0.05/32 for product AND graph measurements.
+It is fixed regularization, NOT a measured/calibrated noise claim. The unchanged
+choose() keeps all 243 product bases plus the eight graph proposals, original
+proposal RNG consumption, combined score, product-first order and lowest-index ties.
+Call choose exactly once per block; do not fit a policy after results.
+
+Within a block, process full rows in canonical lexicographic order for numerical
+replay; this is not a claim of physical shot chronology. MF_RANDOM rows are also
+processed in canonical basis/outcome order across its three fixed blocks.
+Both decoders sum +/- posterior probabilities before taking unsigned MAP.
+The adapter enforces 54-copy commit and keeps arm states separate.
+
+QMEMORY&#x27;s retained reference source is pinned at
+6d29604118bbc525983e074a48a1966ac5765f91004116c37c9243a678ce83e2.
+These are software reference decoders. A downstream native-trit checkpoint is not
+itself evidence the lattice owned these computations.
+
+## Single-circuit jobs and exact resource ceiling
+
+Each trial has Q(27 shots), D(27 shots), M0(18), M1(18), M2(18).
+Each M job contains the adaptive copy and an INDEPENDENT random-control copy in
+disjoint registers. No shared ancillas, entangling gates, observations or feedback.
+This is one circuit with multiple isolated registers, not unsupported batch billing.
+
+TOTAL: 25 jobs; 540 hardware repetitions; 1,080 unknown-source copies
+(270 per arm); 2,160 known reference-source copies; 540 auxiliary Bell pairs.
+All circuits allocate 75 logical qubits and 46 classical bits.
+Q/D use 23 learning rails; combined M uses 28; 47 rails are reserved for witnesses.
+Widths fit the retained LOGICAL max_qubits_per_job=107, not a proven routed fit.
+An exact-provider validation/quote is still required for the new wider circuits.
+
+Coins use theta=2 acos(1/sqrt(3)), RY(theta) on a, CH(a,b), controlled-Sdg(b,q),
+then CH(a,q). Read a,b with q. Branches 00,10,11 give Z,X,Y with probability 1/3.
+Noisy 01 maps to Z and is NEVER dropped. Complete coin counts remain reported.
+For the Bell reference the same coin controls the two rails of ONE fixed pair
+within each circuit. Its ideal conditional Kraus operator is
+(U_b tensor U_b)/sqrt(3); source-independent coins do not select favorable states.
+These facts do not certify actual hardware setting independence or readout errors.
+
+The emitter uses standard qelib1 CH and CU1. Provider decomposition/acceptance
+remains unverified. No undocumented gate or dynamic mid-circuit control is assumed.
+
+## Cbit ownership (c[0] first internally)
+
+- Q/D c[0:10]: Bell source-A then source-B; c[10:20] unwritten, must be zero.
+- M c[0:5]: adaptive outcomes; c[5:10]: random-control outcomes;
+  c[10:20]: random-control coins a,b per site.
+- c[20:25]: known + source; c[25:30]: known - source.
+- c[30:32]: Bell-reference outcomes; c[32:34]: its shared setting coins.
+- c[34],c[35]: known |0&gt;,|1&gt; readout references.
+- c[36:46]: known-source Bell row (intact in Q/M; dephased in D).
+
+The complete 46-bit joint histogram is retained with exact positive integer counts
+summing to 18 or 27. No top-N summary, width truncation, padded short string,
+floating counts or guessed endianness is accepted. normalize_histogram requires
+an externally bound msb_c or lsb_c provider convention; no default is chosen.
+Only split_cbits outputs enter learner processes. Witness/source/QASM/other-arm
+metadata never enters a learner. No postselection or thinning.
+
+## Source and witness assumptions
+
+Source/environment preparation is the existing ideal environment-mixed contract:
+independent purifications, never reusing one fixed pure secret instance as rho.
+ALL allocated rails, including unmeasured mixing/marker/coin/padding rails, require
+fresh initialized state per repetition. No reset opcode is fabricated.
+Physical initialization/reset guarantees and independent-repetition assumptions
+remain execution blockers pending provider evidence.
+
+Known reference P=(X,Y,Z,X,Y), signs +/- for the two single sources, + for the
+pair. Witnesses use independently prepared reference states, never extra hidden
+target copies. Hardware routing must not couple arm or witness registers.
+
+There are seven predeclared witness statistics: two readout-correctness indicators,
+two sign-aligned source parities, intact reference Bell chi(P), dephased reference
+chi(P), and W=3 lambda_XX, -3 lambda_YY or 3 lambda_ZZ according to the uniform
+setting on the SAME Bell pair. Ideal W=3; the separable bound is 1 under trusted
+Pauli measurements and independent uniform settings. This is NOT device-independent
+entanglement certification. Coin/readout calibration assumptions cannot be inferred
+from the ideal proof or from a balance of observed settings alone.
+
+Use simultaneous familywise 99% Hoeffding bounds: for each mean of N independent
+bounded observations in [a,b], radius=(b-a)*sqrt(log(14/0.01)/(2N)), clipped to
+[a,b]. No iid/binomial claim is made from pooling different job circuits. Correlated
+shots or settings correlated with the prepared state invalidate this justification.
+
+Readout lower bounds &gt;0.80; aligned source and intact-pair expectation lower bounds
+&gt;0.50; dephased-pair interval entirely inside (-0.50,+0.50); Bell W lower bound &gt;1.
+Export every per-job statistic, settings histogram, route/calibration change and
+incident. A known-reference pass does not prove the unknown source&#x27;s fidelity.
+Do not pool away a fault. If the physical trust assumptions cannot be bound, the
+witness gate is UNKNOWN, not passed.
+
+## Relation generation, scheduling and analysis
+
+Final registration must freeze a future NIST Beacon v2 pulse &gt;=86,400 seconds
+after reviewed publication. Exact 64-byte output value; no actual confirmation
+target is derived now. SHA256 counter streams use separate domains:
+GENESIS_QMEMORY_25_UNSIGNED_V01/relations/v1/,
+.../signs/v1/, .../schedule/v1/, .../proposals/v1/.
+Append the 64 beacon bytes and an 8-byte big-endian counter. For relation draws,
+read each digest&#x27;s first unsigned big-endian u64, reject &gt;=floor(2^64/1023)*1023,
+and use 1+(u64 mod 1023) as x|(z&lt;&lt;5) Pauli index. Sign per trial is + if the
+corresponding sign-stream first bit is zero, otherwise -. Proposal seed per trial
+is the first 16 proposal-stream bytes as a big-endian integer. Scheduling-stream
+first bit per trial chooses Q,D versus D,Q; then M0,M1,M2. Trials run in index order.
+Nothing adapts to results except the same arm&#x27;s registered next-basis choice.
+
+Commit all predictions before the evaluator exposes targets. Reveal source truth
+only after all available arm predictions are committed; the source process must
+know P to prepare it but the learners may not. Duplicate draws remain trials,
+not pooled repeated seeds. Independence/exchangeability of trial outcomes is a
+statistical assumption; if device drift or correlated instances defeats it, report
+descriptive outcomes, not the advertised sign-test interpretation.
+
+Primary: all validity/witness conditions pass, Q=5/5 and D=0/5.
+Exact one-sided paired-discordance p=1/32=0.03125 &lt;0.05.
+This supports only a large, consistent bounded protocol difference.
+Always report all four accuracies and all paired p values.
+A predeclared joint all-controls statement requires each of the three one-sided
+tests &lt;0.05, interpreted as an intersection-union claim, never three selectively
+reported separate claims. Its single-copy comparator is the three-block reference,
+not the old per-copy learner. If the assumptions fail, no significance claim.
+Other valid outcomes: NO_SUPPORT_AT_THIS_BUDGET.
+Missing/incomplete/malformed/invalid data: INVALID_OR_INCOMPLETE.
+No extensions, extra seeds, retries, after-result threshold changes or new a_min.
+
+## Budget, stop rules and publication
+
+Hard maximum 25 EXISTING Spark credits, zero Full, no priority surcharge or new
+credit purchase. Every actual job quote must be &lt;=1, with one-credit reservations
+for remaining slots; spend+pending-other+current-quote+remaining-slots &lt;=25.
+An uncertain submission is an occupied slot, not permission to retry.
+If no binding whole-run tariff is available, the per-quote guard may stop an
+incomplete run. It prevents overspend, not guarantees complete affordability.
+
+Predeclared future wall cap: 24 hours from first accepted submission. Stop NEW
+submissions on a cap, invalid reference/reset/provider incident or unavailable
+binding quote. Do not auto-cancel or resubmit an already accepted job; retain its
+eventual result and its cost. Record incomplete attempts. No extra hardware
+calibration or witness-only jobs may be added to these 25 slots.
+
+Current readiness layers:
+- scientific design/contract: candidate for independent re-review;
+- tiny ideal/contract checks: retained separately, not a scientific campaign;
+- provider reset/measurement trust, processed layout/codec/decomposition/quotes:
+  NOT BOUND;
+- execution controller/process isolation and final provider adapter: NOT BOUND;
+- accepted publication and future pulse timestamp: NOT SET.
+
+A reviewed conditional pilot design is not an executable Stage-C acceptance.
+The final registration must bind the exact code/runtime, provider route and
+execution controller, budget evidence and future pulse before publication.
+Do not start a clock from this draft or claim a reviewer approved missing bindings.
+No repeat of the completed development study is required or authorized.
+
+## Local scope
+
+q25_design_contract.py: small deterministic circuit, codec, decoder, witness and
+decision helpers. q25_measure_first_policy.py: target-free reference selector
+adapter. Neither contains provider/spend APIs, a confirmation campaign launcher,
+or a simulator. Current Python lacks NumPy; the EXISTING review venv has 2.5.2.
+No package installation was made.
+</pre><footer><p>No purchases, QPU jobs or scientific campaign are run by this static website.</p></footer></body></html>

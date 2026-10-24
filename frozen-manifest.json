@@ -1,0 +1,33 @@
+{
+  "schema_id": "genesis-qmemory-public-frozen-plan-v1",
+  "snapshot_id": "q25-plan-v02-20261023",
+  "campaign_id": "GENESIS_QMEMORY_25_UNSIGNED_V01",
+  "prepared_at_utc": "2026-10-23T23:10:14.721021+00:00",
+  "protocol_file": "protocol.txt",
+  "protocol_sha256": "ab7ead7fc705cf81a2db41c67b837708d121e11c62845e4b60d9eea98eca6ffc",
+  "protocol_changed": false,
+  "source_and_review_archive_published": false,
+  "scientific_review": "ACCEPT_SCOPED_CONDITIONAL_DESIGN_AND_TINY_SOFTWARE_CONTRACTS",
+  "offline_recovery_review": "ACCEPT_SCOPED_OFFLINE_RECOVERY_REPAIRS",
+  "claim": "A prospective bounded four-arm quantum-memory protocol comparison; no guaranteed outcome or unrestricted quantum advantage claim",
+  "budget": {
+    "max_existing_spark_credits": 25,
+    "purchases": false,
+    "full_credits": 0
+  },
+  "publication": {
+    "accepted_registration_at_utc": null,
+    "fixed_future_pulse_utc": null
+  },
+  "authority": {
+    "registration_clock_started": false,
+    "spending_authorized": false,
+    "qpu_execution_authorized": false
+  },
+  "remaining_bindings": [
+    "Production provider codec/transport and physical assumptions",
+    "Exact accepted circuit/price evidence",
+    "Accepted final registration and authenticated future pulse at least 86400 seconds later"
+  ],
+  "note": "Preparation time is not publication or accepted registration time. The original plan retains creation-time status wording; later scoped reviews do not constitute hardware or execution acceptance."
+}
